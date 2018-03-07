@@ -1,0 +1,23 @@
+type Hub {
+    id: ID!
+    address: String!
+    location_name: String!
+    createdAt: String!
+    updateAt: String!
+    deliverBoys: [DeliveryBoy]!
+    friends: [String]!
+}
+
+input UpdatedHub {
+    address: String
+    location_name: String
+}
+
+type Query {
+    getHub(id: Int!): Hub!
+}
+
+type Mutation {
+    updateHub(id: Int!, input: UpdatedHub!): Hub!
+}
+

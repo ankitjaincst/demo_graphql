@@ -1,0 +1,15 @@
+type DeliveryBoy {
+    id: ID!
+    name: String!
+    mobile: String!
+    hub: Hub
+}
+
+input UpdateDeliveryBoy {
+    name: String
+}
+
+extend type Query {
+    getDeliveryBoy: DeliveryBoy!
+}
+

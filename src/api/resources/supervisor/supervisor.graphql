@@ -1,0 +1,15 @@
+type Supervisor {
+    id: ID!
+    name: String!
+    mobile: String!
+    hub: Hub
+}
+
+input UpdateSupervisor {
+    name: String
+}
+
+extend type Query {
+    getSupervisor: Supervisor!
+}
+
